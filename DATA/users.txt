@@ -1,0 +1,4 @@
+alice,$2b$12$a9smqdE87cTl6efyMgZH8uE6wbU6DMR4z.oT9EIcq5PUuriN801wS
+bob,$2b$12$k0OXFIK5qdeNY0SR/vyBQewI/r0LQHEYGvhqZNMHHnLnKE7Gg8oxG
+John,$2b$12$oxgUbvuuZl25SxdeabAdtOqJHSPKAc6NhkoHaOxV19A8qadZgK/pS
+Kawua,$2b$12$nNpB.fNlMApTnhlSwwexvuRESqC5ctIo/J1XHnGR6uil2UF7isYTW

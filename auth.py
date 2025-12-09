@@ -1,6 +1,7 @@
 import bcrypt
 import os
-
+import sqlite3
+import pathlib as Path
 
 # ---------------------------------------------------
 # PASSWORD HASHING
@@ -196,3 +197,41 @@ def main():
 # ---------------------------------------------------
 if __name__ == "__main__":
     main()
+
+def migrate_users_from_file(conn, filepath=Path("DATA") / "users.txt"):
+    
+    if not filepath.exists():
+        print(f" File not found: {filepath}")
+        print("   No users to migrate.")
+        return
+    
+    cursor = conn.cursor()
+    migrated_count = 0
+    valid_roles = ['user', 'admin', 'analyst']
+    
+    with open(filepath, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Parse line: username,hashed_password,role
+            parts = line.split(',')
+            if len(parts) >= 2:
+                username = parts[0]
+                password_hash = parts[1]
+                role = parts[2] if len(parts) >= 3 and parts[2] in valid_roles else 'user'  # Default to 'user' if invalid/missing
+                
+                # Insert user (ignore if already exists)
+                try:
+                    cursor.execute(
+                        "INSERT OR IGNORE INTO users (username, password_hash, role) VALUES (?, ?, ?)",
+                        (username, password_hash, role)
+                    )
+                    if cursor.rowcount > 0:
+                        migrated_count += 1
+                except sqlite3.Error as e:
+                    print(f"Error migrating user {username}: {e}")
+    
+    conn.commit()
+    print(f"Migrated {migrated_count} users from {filepath.name}")
