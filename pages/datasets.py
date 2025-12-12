@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+import plotly.express as px
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
@@ -11,15 +13,18 @@ def datasets_page():
         st.rerun()
     st.title("Datasets Management")
     conn = connect_database()
-    
+
+    # Load CSV for statistics
+    try:
+        datasets_metadata_csv = pd.read_csv('DATA/datasets_metadata.csv')
+    except FileNotFoundError:
+        st.error("Error loading datasets metadata CSV file.")
+        datasets_metadata_csv = pd.DataFrame()
+
     # CRUD
-    tab1, tab2 = st.tabs(["View/Add", "Update/Delete"])
+    tab1, tab2, tab3 = st.tabs(["View/Add", "Update/Delete", "Statistics"])
     
     with tab1:
-        st.subheader("All Datasets")
-        df = get_all_datasets()
-        st.dataframe(df)
-        
         st.subheader("Add New Dataset")
         name = st.text_input("Name")
         description = st.text_area("Description")
@@ -40,5 +45,20 @@ def datasets_page():
         if st.button("Delete Dataset"):
             delete_dataset(conn, dataset_id)
             st.success("Deleted!")
-    
+
+    with tab3:
+        st.subheader("Dataset Statistics")
+        if not datasets_metadata_csv.empty:
+            col1, col2 = st.columns(2)
+            with col1:
+                fig1 = px.bar(datasets_metadata_csv, x='uploaded_by', title="Datasets by Uploaded By")
+                st.plotly_chart(fig1)
+                fig2 = px.pie(datasets_metadata_csv, names='name', values='rows', title="Dataset Sizes (Rows)")
+                st.plotly_chart(fig2)
+            with col2:
+                fig3 = px.bar(datasets_metadata_csv, x='name', y='columns', title="Dataset Columns")
+                st.plotly_chart(fig3)
+        else:
+            st.write("No datasets metadata available.")
+
     conn.close()

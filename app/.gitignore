@@ -1,0 +1,7 @@
+# Python Example
+pycache/
+*.pyc
+.env
+.vscode
+.idea/
+secrets.tom

@@ -1,0 +1,36 @@
+2025-12-10 15:11:39 - IntelligencePlatform - INFO - logger.py:112 - This is an info message
+2025-12-10 15:11:39 - IntelligencePlatform - WARNING - logger.py:122 - This is a warning message
+2025-12-10 15:11:39 - IntelligencePlatform - ERROR - logger.py:136 - This is an error message
+2025-12-10 15:11:39 - IntelligencePlatform - INFO - logger.py:112 - User 'john_doe' performed action: login - Successful login from 192.168.1.1
+2025-12-10 15:11:39 - IntelligencePlatform - INFO - logger.py:112 - User 'jane_analyst' performed action: create_incident - Created incident #123
+2025-12-10 15:11:39 - IntelligencePlatform - INFO - logger.py:112 - Database INSERT on 'users': SUCCESS - Added new user
+2025-12-10 15:11:39 - IntelligencePlatform - ERROR - logger.py:136 - Database UPDATE on 'incidents': FAILED - Failed to update
+2025-12-10 15:11:39 - IntelligencePlatform - INFO - logger.py:112 - SECURITY [LOGIN_ATTEMPT] User: john_doe - Successful login
+2025-12-10 15:11:39 - IntelligencePlatform - WARNING - logger.py:122 - SECURITY [FAILED_LOGIN] User: unknown_user - 3 failed attempts
+2025-12-10 15:12:13 - IntelligencePlatform - INFO - logger.py:112 - This is an info message
+2025-12-10 15:12:13 - IntelligencePlatform - WARNING - logger.py:122 - This is a warning message
+2025-12-10 15:12:13 - IntelligencePlatform - ERROR - logger.py:136 - This is an error message
+2025-12-10 15:12:13 - IntelligencePlatform - INFO - logger.py:112 - User 'john_doe' performed action: login - Successful login from 192.168.1.1
+2025-12-10 15:12:13 - IntelligencePlatform - INFO - logger.py:112 - User 'jane_analyst' performed action: create_incident - Created incident #123
+2025-12-10 15:12:13 - IntelligencePlatform - INFO - logger.py:112 - Database INSERT on 'users': SUCCESS - Added new user
+2025-12-10 15:12:13 - IntelligencePlatform - ERROR - logger.py:136 - Database UPDATE on 'incidents': FAILED - Failed to update
+2025-12-10 15:12:13 - IntelligencePlatform - INFO - logger.py:112 - SECURITY [LOGIN_ATTEMPT] User: john_doe - Successful login
+2025-12-10 15:12:13 - IntelligencePlatform - WARNING - logger.py:122 - SECURITY [FAILED_LOGIN] User: unknown_user - 3 failed attempts
+2025-12-10 15:29:42 - IntelligencePlatform - INFO - logger.py:112 - This is an info message
+2025-12-10 15:29:42 - IntelligencePlatform - WARNING - logger.py:122 - This is a warning message
+2025-12-10 15:29:42 - IntelligencePlatform - ERROR - logger.py:136 - This is an error message
+2025-12-10 15:29:42 - IntelligencePlatform - INFO - logger.py:112 - User 'john_doe' performed action: login - Successful login from 192.168.1.1
+2025-12-10 15:29:42 - IntelligencePlatform - INFO - logger.py:112 - User 'jane_analyst' performed action: create_incident - Created incident #123
+2025-12-10 15:29:42 - IntelligencePlatform - INFO - logger.py:112 - Database INSERT on 'users': SUCCESS - Added new user
+2025-12-10 15:29:42 - IntelligencePlatform - ERROR - logger.py:136 - Database UPDATE on 'incidents': FAILED - Failed to update
+2025-12-10 15:29:42 - IntelligencePlatform - INFO - logger.py:112 - SECURITY [LOGIN_ATTEMPT] User: john_doe - Successful login
+2025-12-10 15:29:42 - IntelligencePlatform - WARNING - logger.py:122 - SECURITY [FAILED_LOGIN] User: unknown_user - 3 failed attempts
+2025-12-12 23:11:38 - IntelligencePlatform - INFO - logger.py:112 - This is an info message
+2025-12-12 23:11:38 - IntelligencePlatform - WARNING - logger.py:122 - This is a warning message
+2025-12-12 23:11:38 - IntelligencePlatform - ERROR - logger.py:136 - This is an error message
+2025-12-12 23:11:38 - IntelligencePlatform - INFO - logger.py:112 - User 'john_doe' performed action: login - Successful login from 192.168.1.1
+2025-12-12 23:11:38 - IntelligencePlatform - INFO - logger.py:112 - User 'jane_analyst' performed action: create_incident - Created incident #123
+2025-12-12 23:11:38 - IntelligencePlatform - INFO - logger.py:112 - Database INSERT on 'users': SUCCESS - Added new user
+2025-12-12 23:11:38 - IntelligencePlatform - ERROR - logger.py:136 - Database UPDATE on 'incidents': FAILED - Failed to update
+2025-12-12 23:11:38 - IntelligencePlatform - INFO - logger.py:112 - SECURITY [LOGIN_ATTEMPT] User: john_doe - Successful login
+2025-12-12 23:11:38 - IntelligencePlatform - WARNING - logger.py:122 - SECURITY [FAILED_LOGIN] User: unknown_user - 3 failed attempts
